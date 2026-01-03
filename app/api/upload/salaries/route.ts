@@ -1,6 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/supabase/client'
-import { parseSalariesExcel, SalaryData } from '@/lib/excelParser'
+import { NextRequest, NextResponse } from "next/server";
+import { supabase } from "@/supabase/client";
+import { parseSalariesExcel, type SalaryData } from "@/lib/excelParser";
+
+export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest) {
   try {
